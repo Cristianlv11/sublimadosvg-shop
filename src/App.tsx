@@ -360,6 +360,7 @@ export function App() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
+        onAddToCart={handleAddToCart}
       />
 
       {/* Wishlist Modal */}

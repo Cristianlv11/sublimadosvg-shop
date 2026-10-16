@@ -636,10 +636,113 @@ export const STORE_CONFIG = {
   country: 'Colombia',
   currency: '$',
   currencyCode: 'COP',
-  freeShippingThreshold: 120000,
+  freeShippingThreshold: 150000,
   logoPrincipal: '/logo-principal.webp',
   bannerCatalogoFe: '/banner-catalogo-fe.webp',
 };
+
+export interface CartRewardTier {
+  id: string;
+  threshold: number;
+  title: string;
+  shortLabel: string;
+  description: string;
+  icon: 'truck' | 'gift' | 'crown';
+  badge: string;
+  value: number;
+}
+
+export const CART_REWARD_TIERS: CartRewardTier[] = [
+  {
+    id: 'tier-envio',
+    threshold: 150000,
+    title: 'Envío Gratis a Toda Colombia',
+    shortLabel: 'Envío Gratis',
+    description: 'Ahorra el costo del flete nacional a cualquier ciudad del país',
+    icon: 'truck',
+    badge: 'Nivel 1 · $150.000',
+    value: 15000,
+  },
+  {
+    id: 'tier-llavero',
+    threshold: 200000,
+    title: 'Llavero Personalizado de Regalo',
+    shortLabel: 'Llavero de Regalo',
+    description: 'Llavero metálico/acrílico doble cara con tu foto o dedicatoria ($0)',
+    icon: 'gift',
+    badge: 'Nivel 2 · $200.000',
+    value: 18000,
+  },
+  {
+    id: 'tier-caja-vip',
+    threshold: 260000,
+    title: 'Caja de Regalo de Lujo + Tarjeta VIP',
+    shortLabel: 'Caja Regalo VIP',
+    description: 'Empaque especial con lazo y tarjeta dedicatoria para tu celebración ($0)',
+    icon: 'crown',
+    badge: 'Nivel 3 · $260.000',
+    value: 25000,
+  },
+];
+
+export interface CartPromoProduct {
+  id: string;
+  baseProductId: string;
+  name: string;
+  originalPrice: number;
+  promoPrice: number;
+  discountPercentage: number;
+  image: string;
+  badge: string;
+  tagline: string;
+}
+
+export const CART_PROMO_PRODUCTS: CartPromoProduct[] = [
+  {
+    id: 'promo-llaveros-pack',
+    baseProductId: 'prod-llaveros-pack',
+    name: 'Pack de Llaveros con Foto / Frases (Set x 2)',
+    originalPrice: 18000,
+    promoPrice: 12900,
+    discountPercentage: 28,
+    image: '/prod-llaveros.webp',
+    badge: '28% OFF · Promo Carrito',
+    tagline: 'Lleva tus fotos favoritas a todos lados en ambos lados',
+  },
+  {
+    id: 'promo-mug-tradicional',
+    baseProductId: 'prod-mug-tradicional-foto',
+    name: 'Mug Cerámico 11oz Personalizado con Fotos',
+    originalPrice: 20000,
+    promoPrice: 15500,
+    discountPercentage: 22,
+    image: '/prod-mug-tradicional-foto.jpg',
+    badge: 'El Favorito · 22% OFF',
+    tagline: 'Cerámica brillante resistente a microondas y lavadas',
+  },
+  {
+    id: 'promo-rompecabezas-corazon',
+    baseProductId: 'prod-rompecabezas-corazon',
+    name: 'Rompecabezas en Forma de Corazón (75 Piezas)',
+    originalPrice: 36000,
+    promoPrice: 26900,
+    discountPercentage: 25,
+    image: '/prod-rompecabezas-corazon.webp',
+    badge: '25% OFF · Especial Parejas',
+    tagline: 'El regalo interactivo perfecto para sorprender',
+  },
+  {
+    id: 'promo-cojin-decorativo',
+    baseProductId: 'prod-cojin-personalizado',
+    name: 'Cojín Suave Personalizado (Relleno Incluido)',
+    originalPrice: 42000,
+    promoPrice: 32900,
+    discountPercentage: 22,
+    image: '/forma-producto-cojin.jpg',
+    badge: '22% OFF · Decoración',
+    tagline: 'Felpa suave al tacto con estampado que no se borra',
+  },
+];
 
 export const formatPrice = (amount: number): string => {
   return `${STORE_CONFIG.currency}${amount.toLocaleString('es-CO')}`;

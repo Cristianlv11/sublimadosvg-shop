@@ -249,7 +249,7 @@ export const MarketHero: React.FC<MarketHeroProps> = ({ onSelectCategory, onExpl
                   <span>DESPACHOS DESDE PEREIRA</span>
                 </div>
                 <h4 className="font-heading font-extrabold text-base text-slate-900 leading-tight">
-                  Envíos Gratis en compras desde $120.000
+                  Envíos Gratis en compras desde $150.000
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Llegamos a Pereira, Dosquebradas, Eje Cafetero y toda Colombia con guía de rastreo.

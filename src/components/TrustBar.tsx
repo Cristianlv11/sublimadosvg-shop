@@ -7,7 +7,7 @@ export const TrustBar: React.FC = () => {
       icon: Truck,
       title: 'Envíos a Toda Colombia',
       desc: 'Despachos desde Pereira con guía de rastreo y empaque seguro.',
-      highlight: 'Envío gratis desde $120.000',
+      highlight: 'Envío gratis desde $150.000',
     },
     {
       icon: ShieldCheck,
