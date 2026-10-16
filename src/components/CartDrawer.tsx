@@ -64,9 +64,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   const subtotal = items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
 
   // Reward Tiers thresholds
-  const FREE_SHIPPING_THRESHOLD = 150000;
-  const GIFT_TIER_1_THRESHOLD = 200000;
-  const GIFT_TIER_2_THRESHOLD = 260000;
+  const FREE_SHIPPING_THRESHOLD = STORE_CONFIG.freeShippingThreshold;
+  const GIFT_TIER_1_THRESHOLD = CART_REWARD_TIERS[1].threshold;
+  const GIFT_TIER_2_THRESHOLD = CART_REWARD_TIERS[2].threshold;
 
   const isTier1Unlocked = subtotal >= FREE_SHIPPING_THRESHOLD; // Envío Gratis
   const isTier2Unlocked = subtotal >= GIFT_TIER_1_THRESHOLD; // Llavero de Regalo
@@ -591,7 +591,6 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {CART_PROMO_PRODUCTS.map((promo) => {
                       const isItemAdded = addedPromoId === promo.id;
-                      const isInCart = items.some((i) => i.product.id === promo.baseProductId);
 
                       return (
                         <div
