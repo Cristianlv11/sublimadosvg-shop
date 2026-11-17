@@ -264,7 +264,7 @@ export function App() {
   }, [products, wishlistIds]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#cfb8eb] via-[#f0c3e6] via-[#c4ace8] via-[#edbde2] to-[#cfb8eb] selection:bg-purple-600 selection:text-white font-sans text-slate-800 pb-16 sm:pb-0">
+    <div className="min-h-screen flex flex-col bg-[#fbf4f8] selection:bg-purple-600 selection:text-white font-sans text-slate-800 pb-16 sm:pb-0">
       
       {/* 1. Marketplace Header */}
       <Navbar

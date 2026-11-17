@@ -9,8 +9,8 @@
 
   body {
     @apply text-slate-800 antialiased font-sans;
-    background: linear-gradient(180deg, #cfb8eb 0%, #f0c3e6 20%, #c4ace8 40%, #edbde2 60%, #cbb1ea 80%, #f0c2e6 100%);
-    background-attachment: fixed;
+    /* Fondo rosado muy suave y liso (antes un degradado lila de seis colores) */
+    background: #fbf4f8;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -31,7 +31,7 @@
 
 /* Custom scrollbar (scrollbar-color para Firefox; ::-webkit- para Chrome y Safari antiguos) */
 html {
-  scrollbar-color: #d9a3b5 #fdf4f6;
+  scrollbar-color: #c084fc #ede5f7;
 }
 ::-webkit-scrollbar {
   width: 10px;
