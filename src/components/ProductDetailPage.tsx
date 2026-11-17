@@ -538,6 +538,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   </label>
                   <input
                     type="text"
+                    autoComplete="off"
                     value={customText}
                     onChange={(e) => setCustomText(e.target.value)}
                     placeholder="Ej: Te Amo Mamá, Valentina, Feliz Cumpleaños..."

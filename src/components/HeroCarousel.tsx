@@ -296,7 +296,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(88,28,135,0.18)] group-hover:scale-105 group-hover:drop-shadow-[0_18px_32px_rgba(219,39,119,0.3)] transition-all duration-500 ease-out"
-                    loading="eager"
+                    // Solo las primeras se ven al entrar; las demás del carrusel cargan cuando hacen falta
+                    loading={idx < 2 ? "eager" : "lazy"}
                   />
                 </div>
 

@@ -327,6 +327,7 @@ const CustomizerContent: React.FC<CustomizerContentProps> = ({ product, onClose,
                   </label>
                   <input
                     type="text"
+                    autoComplete="off"
                     value={customText}
                     onChange={(e) => setCustomText(e.target.value)}
                     placeholder="Ej: Te Amo Mamá, Mi Graduación 2026, Carlos..."

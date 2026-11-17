@@ -39,6 +39,10 @@ export const MainTopHeroBanner: React.FC<MainTopHeroBannerProps> = ({
         >
           <img
             src="/banner-vg-logo-escarcha.jpg"
+            fetchPriority="high"
+            // Medidas reales de la foto: el navegador reserva el espacio y el recuadro de abajo no salta
+            width={1376}
+            height={768}
             alt="VG Personalizados - Detalles Únicos para Momentos Especiales - Más que productos, creamos emociones"
             className="w-full h-auto max-h-[380px] sm:max-h-[440px] lg:max-h-[480px] object-cover sm:object-contain object-center mx-auto drop-shadow-xl group-hover:scale-[1.01] transition-transform duration-700 ease-out"
             loading="eager"

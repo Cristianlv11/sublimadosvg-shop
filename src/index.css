@@ -29,7 +29,10 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar (scrollbar-color para Firefox; ::-webkit- para Chrome y Safari antiguos) */
+html {
+  scrollbar-color: #d9a3b5 #fdf4f6;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }

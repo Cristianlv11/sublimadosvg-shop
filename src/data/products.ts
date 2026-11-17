@@ -463,7 +463,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       'Sensor térmico LED impermeable de larga duración',
       'Conservación térmica superior para bebidas frías y calientes',
     ],
-    image: '/prod-termo-pereira-viaducto.png',
+    image: '/prod-termo-pereira-viaducto.webp',
     mockupType: 'tumbler',
     badge: 'Edición Pereira ☕',
     rating: 5.0,

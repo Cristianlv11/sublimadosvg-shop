@@ -667,6 +667,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </label>
                 <input
                   type="text"
+                  autoComplete="name"
+                  enterKeyHint="next"
                   required
                   value={customerInfo.name}
                   onChange={(e) => setCustomerInfo({ ...customerInfo, name: e.target.value })}
@@ -681,6 +683,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </label>
                 <input
                   type="tel"
+                  autoComplete="tel"
+                  enterKeyHint="next"
                   required
                   value={customerInfo.phone}
                   onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
@@ -696,6 +700,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   </label>
                   <input
                     type="text"
+                    autoComplete="address-level2"
+                    enterKeyHint="next"
                     value={customerInfo.city}
                     onChange={(e) => setCustomerInfo({ ...customerInfo, city: e.target.value })}
                     placeholder="Pereira, Armenia, Bogotá..."
@@ -708,6 +714,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   </label>
                   <input
                     type="text"
+                    autoComplete="street-address"
+                    enterKeyHint="next"
                     value={customerInfo.address}
                     onChange={(e) => setCustomerInfo({ ...customerInfo, address: e.target.value })}
                     placeholder="Calle, Barrio, Casa..."
@@ -722,6 +730,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </label>
                 <textarea
                   value={customerInfo.notes}
+                  autoComplete="off"
                   onChange={(e) => setCustomerInfo({ ...customerInfo, notes: e.target.value })}
                   placeholder="Ej: Empacar para regalo, nombre que va en la dedicatoria, fecha especial..."
                   rows={2}

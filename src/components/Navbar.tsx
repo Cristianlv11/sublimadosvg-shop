@@ -151,6 +151,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Text input */}
               <input
                 type="text"
+                enterKeyHint="search"
+                autoComplete="off"
                 placeholder="¿Qué estás buscando? ej. Camisetas para eventos, Mugs mágicos, Agendas..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
@@ -240,6 +242,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="relative">
             <input
               type="text"
+              enterKeyHint="search"
+              autoComplete="off"
               placeholder="Buscar camisetas, mugs mágicos, agendas..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
