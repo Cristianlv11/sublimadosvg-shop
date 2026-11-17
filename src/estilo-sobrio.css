@@ -14,25 +14,26 @@
   color: #6b21a8 !important;
 }
 
-/* Botones y recuadros con degradado morado/rosa -> morado sólido de la marca */
-[class*="bg-gradient-to"][class*="from-purple-6"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-purple-7"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-purple-8"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-pink-5"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-pink-6"]:not(.bg-clip-text) {
+/* Botones y recuadros con degradado morado/rosa -> morado sólido de la marca.
+   Las capas que se funden a transparente (sombras sobre fotos, brillo al pasar el ratón) se dejan igual. */
+[class*="bg-gradient-to"][class*="from-purple-6"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-purple-7"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-purple-8"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-pink-5"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-pink-6"]:not(.bg-clip-text):not([class*="transparent"]) {
   background-image: none !important;
   background-color: #7e22ce !important;
 }
-[class*="bg-gradient-to"][class*="from-purple-9"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-purple-95"]:not(.bg-clip-text),
-[class*="from-[#4a044e]"]:not(.bg-clip-text) {
+[class*="bg-gradient-to"][class*="from-purple-9"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-purple-95"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="from-[#4a044e]"]:not(.bg-clip-text):not([class*="transparent"]) {
   background-image: none !important;
   background-color: #4a1663 !important;
 }
 /* Fondos claros con degradado -> blanco */
-[class*="bg-gradient-to"][class*="from-purple-50"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-purple-100"]:not(.bg-clip-text),
-[class*="bg-gradient-to"][class*="from-purple-200"]:not(.bg-clip-text) {
+[class*="bg-gradient-to"][class*="from-purple-50"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-purple-100"]:not(.bg-clip-text):not([class*="transparent"]),
+[class*="bg-gradient-to"][class*="from-purple-200"]:not(.bg-clip-text):not([class*="transparent"]) {
   background-image: none !important;
   background-color: #ffffff !important;
 }
